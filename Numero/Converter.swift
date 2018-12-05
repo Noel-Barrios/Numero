@@ -27,5 +27,7 @@
 /// THE SOFTWARE.
 
 class Converter {
-  
+    func convert (_ number: Int) -> String {
+        return ""
+    }
 }
