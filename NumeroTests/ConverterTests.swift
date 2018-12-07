@@ -27,8 +27,16 @@ class ConverterTests: XCTestCase {
     // the test calls convert an stores the result
     func testConversionForOne() {
         let result = converter.convert(1)
-        // this uses XCTAssertEqual to check the expected conversion result.
+        // Asserts that two expressions have the same value, the third argument is an optional description fof the failure.
+        // generates a failure when expression1 != expression2
         XCTAssertEqual(result, "I", "Conversion for 1 is incorrect")
     }
+    
+    func testConversionForTwo() {
+        let result = converter.convert(2)
+        XCTAssertEqual(result, "II", "Conversion for 2 is incorrect")
+    }
+    
+
     
 }

@@ -26,8 +26,25 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+
+
+//// start with a failing test and then fix your code to pass.  THe reason is to avoid a false-positive
+//class Converter {
+//    func convert (_ number: Int) -> String {
+//        return ""
+//    }
+
+//// Fix your first failure.  Make the test pass now
+//class Converter {
+//    func convert (_ number: Int) -> String {
+//        return "I"
+//    }
+    
+    // work on Test #2
 class Converter {
     func convert (_ number: Int) -> String {
-        return ""
+        // creates a new string representing the given string repeated the specified number of times
+        // in other words, this code returns "I", repeated a number of times based on the input
+        return String(repeating: "I", count: number)
     }
 }
