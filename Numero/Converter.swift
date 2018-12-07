@@ -40,11 +40,21 @@
 //        return "I"
 //    }
     
-    // work on Test #2
 class Converter {
+//    // For Test 1 & 2
+//    func convert (_ number: Int) -> String {
+//        // creates a new string representing the given string repeated the specified number of times
+//        // in other words, this code returns "I", repeated a number of times based on the input
+//        return String(repeating: "I", count: number)
+//    }
+
+
+    // For Testing 5
     func convert (_ number: Int) -> String {
-        // creates a new string representing the given string repeated the specified number of times
-        // in other words, this code returns "I", repeated a number of times based on the input
-        return String(repeating: "I", count: number)
+        if number == 5 {
+            return "V"
+        } else {
+            return String(repeating: "I", count: number)
+        }
     }
 }
