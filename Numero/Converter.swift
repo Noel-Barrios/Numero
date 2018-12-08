@@ -70,6 +70,6 @@ class Converter {
             localNumber = localNumber - 5 // decrement the local input by 5
         }
         result += String(repeating: "I", count: localNumber) // append the output w/ a repeating count of the roman numeral conversion for 1.
-        return result
+        return result 
     }
 }
