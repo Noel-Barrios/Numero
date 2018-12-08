@@ -88,6 +88,10 @@ class Converter {
             result += "V" // append the roman numeral representation for 5 to the output
             localNumber = localNumber - 5 // decrement the local input by 5
         }
+        if localNumber >= 4 { // check if the input is GTE to 4
+            result += "VI" // append the roman numeral representation for 4 to the output
+            localNumber = localNumber - 4 // decrement the local input by 4
+        }
         result += String(repeating: "I", count: localNumber) // append the output w/ a repeating count of the roman numeral conversion for 1.
         return result
     }
