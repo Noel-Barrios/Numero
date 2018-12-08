@@ -49,12 +49,23 @@ class Converter {
 //    }
 
 
-    // For Testing 5
-    func convert (_ number: Int) -> String {
-        if number == 5 {
-            return "V"
-        } else {
-            return String(repeating: "I", count: number)
+//    // For Testing 5
+//    func convert (_ number: Int) -> String {
+//        if number == 5 {
+//            return "V"
+//        } else {
+//            return String(repeating: "I", count: number)
+//        }
+//    }
+    
+    func convert(_ number: Int) -> String {
+        var result = ""  // initialize an empty string
+        var localNumber = number // create a local copy of the input to work with
+        if localNumber >= 5 { // check if the input is greater than or equal to 5
+            result += "V" // append the roman numeral representation for 5 to the output
+            localNumber = localNumber - 5 // decrement the local input by 5
         }
+        result += String(repeating: "I", count: localNumber) // append the output w/ a repeating count of the roman numeral conversion for 1.
+        return result
     }
 }
