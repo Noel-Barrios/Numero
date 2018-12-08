@@ -61,6 +61,10 @@ class Converter {
     func convert(_ number: Int) -> String {
         var result = ""  // initialize an empty string
         var localNumber = number // create a local copy of the input to work with
+        if localNumber >= 10 { // check if input is 10 or greater
+            result += "X" // append the roman numeral representation of 10 to the output result
+            localNumber = localNumber - 10 // decrement 10 from the local copy of the input before passing execution to the next phases that handle 5 and 1's
+        }
         if localNumber >= 5 { // check if the input is greater than or equal to 5
             result += "V" // append the roman numeral representation for 5 to the output
             localNumber = localNumber - 5 // decrement the local input by 5
