@@ -59,12 +59,28 @@ class Converter {
 //            return String(repeating: "I", count: number)
 //        }
 //    }
+
+//    // For Testing 10
+//    func convert(_ number: Int) -> String {
+//        var result = ""  // initialize the variable 'result' to an empty string
+//        var localNumber = number // create a local copy of the input to work with
+//        if localNumber >= 10 { // check if input is 10 or greater
+//            result += "X" // append the roman numeral representation of 10 to the output result
+//            localNumber = localNumber - 10 // decrement 10 from the local copy of the input before passing execution to the next phases that handle 5 and 1's
+//        }
+//        if localNumber >= 5 { // check if the input is greater than or equal to 5
+//            result += "V" // append the roman numeral representation for 5 to the output
+//            localNumber = localNumber - 5 // decrement the local input by 5
+//        }
+//        result += String(repeating: "I", count: localNumber) // append the output w/ a repeating count of the roman numeral conversion for 1.
+//        return result
+//    }
     
-    // added this comment to test github
+    // for testing 20
     func convert(_ number: Int) -> String {
-        var result = ""  // initialize an empty string
+        var result = ""  // initialize the variable 'result' to an empty string
         var localNumber = number // create a local copy of the input to work with
-        if localNumber >= 10 { // check if input is 10 or greater
+        while localNumber >= 10 { // check if input is 10 or greater
             result += "X" // append the roman numeral representation of 10 to the output result
             localNumber = localNumber - 10 // decrement 10 from the local copy of the input before passing execution to the next phases that handle 5 and 1's
         }
@@ -73,6 +89,6 @@ class Converter {
             localNumber = localNumber - 5 // decrement the local input by 5
         }
         result += String(repeating: "I", count: localNumber) // append the output w/ a repeating count of the roman numeral conversion for 1.
-        return result 
+        return result
     }
 }
