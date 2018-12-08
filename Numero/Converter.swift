@@ -1,3 +1,5 @@
+
+
 /// Copyright (c) 2018 Razeware LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,6 +60,7 @@ class Converter {
 //        }
 //    }
     
+    // added this comment to test github
     func convert(_ number: Int) -> String {
         var result = ""  // initialize an empty string
         var localNumber = number // create a local copy of the input to work with
