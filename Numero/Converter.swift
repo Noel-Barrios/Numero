@@ -107,31 +107,55 @@ class Converter {
 //    }
     
     
-    // REFACTORING
-    // Refactoring is recognizing duplicate code and cleaning it up.
+//    // REFACTORING
+//    // Refactoring is recognizing duplicate code and cleaning it up.
+//    func convert(_ number: Int) -> String {
+//        var result = ""  // initialize the variable 'result' to an empty string
+//        var localNumber = number // create a local copy of the input to work with
+//        while localNumber >= 10 { // check if input is 10 or greater
+//            result += "X" // append the roman numeral representation of 10 to the output result
+//            localNumber = localNumber - 10 // decrement 10 from the local copy of the input before passing execution to the next phases that handle 5 and 1's
+//        }
+//        while localNumber >= 9 { // check if the input is GTE to 9
+//            result += "IX" // append the roman numeral representation for 9 to the output
+//            localNumber = localNumber - 9 // decrement the local input by 9
+//        }
+//        while localNumber >= 5 { // check if the input is greater than or equal to 5
+//            result += "V" // append the roman numeral representation for 5 to the output
+//            localNumber = localNumber - 5 // decrement the local input by 5
+//        }
+//        while localNumber >= 4 { // check if the input is GTE to 4
+//            result += "IV" // append the roman numeral representation for 4 to the output
+//            localNumber = localNumber - 4 // decrement the local input by 4
+//        }
+//        while localNumber >= 1 {
+//            result += "I"
+//            localNumber = localNumber - 1
+//        }
+//        return result
+//    }
+
+
     func convert(_ number: Int) -> String {
         var result = ""  // initialize the variable 'result' to an empty string
         var localNumber = number // create a local copy of the input to work with
-        while localNumber >= 10 { // check if input is 10 or greater
-            result += "X" // append the roman numeral representation of 10 to the output result
-            localNumber = localNumber - 10 // decrement 10 from the local copy of the input before passing execution to the next phases that handle 5 and 1's
-        }
-        while localNumber >= 9 { // check if the input is GTE to 9
-            result += "IX" // append the roman numeral representation for 9 to the output
-            localNumber = localNumber - 9 // decrement the local input by 9
-        }
-        while localNumber >= 5 { // check if the input is greater than or equal to 5
-            result += "V" // append the roman numeral representation for 5 to the output
-            localNumber = localNumber - 5 // decrement the local input by 5
-        }
-        while localNumber >= 4 { // check if the input is GTE to 4
-            result += "IV" // append the roman numeral representation for 4 to the output
-            localNumber = localNumber - 4 // decrement the local input by 4
-        }
-        while localNumber >= 1 {
-            result += "I"
-            localNumber = localNumber - 1
+        
+        // create an array of tuples representing a number and the corresponding Roman numeral symbol
+        let numberSymbols: [(number: Int, symbol: String)]
+            = [(10, "X"),
+               (9, "IX"),
+               (5, "V"),
+               (4, "IV"),
+               (1, "I")] // initialize the array with values for 10
+        
+        
+        for item in numberSymbols { // loop through the array
+            while localNumber >= item.number { // run each item in the array through the pattern you uncovered for handling the conversion for a number
+                result += item.symbol
+                localNumber = localNumber - item.number
+            }
         }
         return result
     }
+    
 }
